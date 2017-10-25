@@ -2,7 +2,7 @@ package question;
 
 public interface Question {
 
-public abstract String[] questionType();
+
 public abstract int pointValue();
 public abstract boolean result();
 	
