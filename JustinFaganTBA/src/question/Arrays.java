@@ -2,8 +2,15 @@ package question;
 
 public class Arrays implements Question {
 
-	public Arrays() {
-		// TODO Auto-generated constructor stub
+	private int pointValue;
+	private boolean isAnswered;
+	private boolean isCorrect;
+
+	public Arrays(int pointValue, boolean isAnswered, boolean isCorrect, String[]questionSet) {
+		// TODO Auto-generated constructor stub\
+		this.pointValue=pointValue;
+		this.isAnswered=false;
+		this.isCorrect=false;
 	}
 
 
@@ -11,7 +18,7 @@ public class Arrays implements Question {
 	@Override
 	public int pointValue() {
 		// TODO Auto-generated method stub
-		return 0;
+		return pointValue;
 	}
 
 	@Override
