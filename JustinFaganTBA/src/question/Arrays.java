@@ -1,12 +1,15 @@
 package question;
 
+import java.util.Random;
+
 public class Arrays implements Question {
 
 	private int pointValue;
 	private boolean isAnswered;
 	private boolean isCorrect;
+	private String[] questionSet;
 
-	public Arrays(int pointValue, boolean isAnswered, boolean isCorrect, String[]questionSet) {
+	public Arrays(int pointValue, boolean isAnswered, boolean isCorrect, String[] questionSet) {
 		// TODO Auto-generated constructor stub\
 		this.pointValue=pointValue;
 		this.isAnswered=false;
@@ -32,7 +35,8 @@ public class Arrays implements Question {
 	@Override
 	public String getQuestion() {
 		// TODO Auto-generated method stub
-		return null;
+		int rnd = new Random().nextInt(questionSet.length);
+	    return questionSet[rnd];
 	}
 
 }
