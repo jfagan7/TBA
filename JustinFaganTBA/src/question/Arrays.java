@@ -27,4 +27,12 @@ public class Arrays implements Question {
 		return false;
 	}
 
+
+
+	@Override
+	public String getQuestion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
