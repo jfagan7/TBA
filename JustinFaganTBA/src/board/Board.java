@@ -1,17 +1,17 @@
 package board;
 
 import question.Question;
-import question.Arrays;
+import question.ArrayQuestions;
 
 public class Board {
 	
 
 	private Question[][] jeapordyBoard;
-	private Question Arrays;
+	//private Question Arrays;
 
 	public Board(Question[][]jeapordyBoard)
 	{
-		this.jeapordyBoard= new Question[3][3];
+		this.jeapordyBoard= jeapordyBoard;
 /*		int[][]jeapordyBoard = {
 		{100,100,100},
 		{500,500,500},
@@ -19,12 +19,14 @@ public class Board {
 		};
 		
 */	
-	jeapordyBoard[0][0]= Arrays(200,false,false,);
 	}
 	
-/*	public Question[][] generateBoard()
+	public Question[][] generateBoard()
 	{
-		Question[][]jBoard= new Question[3][3];
+		jeapordyBoard= new Question[3][3];
+		jeapordyBoard[0][0]= new ArrayQuestions(200, false,"Question: Can an array have multiple data types?","No");
+		return jeapordyBoard;
 		
-	}*/
+	}
+
 }

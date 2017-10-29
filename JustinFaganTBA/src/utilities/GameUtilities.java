@@ -61,7 +61,7 @@ public class GameUtilities {
 	 * @param goal the string to search for
 	 * @return the index of the first occurrence of goal in statement or -1 if it's not found
 	 */
-	private int findKeyword(String statement, String goal)
+	public int findKeyword(String statement, String goal)
 	{
 		return findKeyword (statement, goal, 0);
 	}
