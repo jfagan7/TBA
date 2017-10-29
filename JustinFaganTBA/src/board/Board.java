@@ -19,13 +19,7 @@ public class Board {
 		};
 		
 */	
-	for(int i=0;i<jeapordyBoard.length;i++)
-	{
-		for(int j=0;j<jeapordyBoard[j].length;j++)
-		{
-			jeapordyBoard[i][j]=Arrays(200,false,false,["what color is the sky?", "hi"]);
-		}
-	}
+	jeapordyBoard[0][0]= Arrays(200,false,false,);
 	}
 	
 /*	public Question[][] generateBoard()

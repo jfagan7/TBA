@@ -9,7 +9,7 @@ public class Arrays implements Question {
 	private boolean isCorrect;
 	private String[] questionSet;
 
-	public Arrays(int pointValue, boolean isAnswered, boolean isCorrect, String[] questionSet) {
+	public Arrays(int pointValue, boolean isAnswered, boolean isCorrect, String questionSet, String solution) {
 		// TODO Auto-generated constructor stub\
 		this.pointValue=pointValue;
 		this.isAnswered=false;
