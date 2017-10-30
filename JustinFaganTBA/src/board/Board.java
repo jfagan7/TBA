@@ -1,7 +1,9 @@
 package board;
 
 import question.Question;
+import question.StringQuestions;
 import question.ArrayQuestions;
+import question.LogicQuestions;
 
 public class Board {
 	
@@ -24,7 +26,9 @@ public class Board {
 	public static Question[][] generateBoard()
 	{
 		jeapordyBoard= new Question[3][3];
-		jeapordyBoard[0][0]= new ArrayQuestions(200, false,"Question: Can an array have multiple data types?","No");
+		jeapordyBoard[0][0]= new ArrayQuestions(200, "Question: Can an array have multiple data types?","No");
+		jeapordyBoard[0][1]= new StringQuestions(200, "Question: Can an array have multiple data types?","No");
+		jeapordyBoard[0][2]= new LogicQuestions(200, "Question: Can an array have multiple data types?","No");
 		return jeapordyBoard;
 		
 	}

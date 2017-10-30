@@ -2,15 +2,15 @@ package jeapordy;
 import java.util.Scanner;
 
 import board.Board;
-import question.ArrayQuestions;
+//import question.ArrayQuestions;
 import question.Question;
 import utilities.GameUtilities;
 
 public class JeapordyRunner {
 
-	private static int playerBalance;
-	private static int numOfCorrect;
-	private static int numOfIncorrect;
+	private static int playerBalance=0;
+	private static int numOfCorrect=0;
+	private static int numOfIncorrect=0;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,10 +19,6 @@ public class JeapordyRunner {
 		System.out.println (GameUtilities.getGreeting());
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
-		
-		int playerBalance=0;
-		int numOfCorrect=0;
-		int numOfIncorrect=0;
 		
 		if(statement.equals("Arrays for 200"))
 		{
@@ -55,6 +51,11 @@ public class JeapordyRunner {
 			System.out.println("Oh I'm sorry. The answer we were looking for was" + answer + "." + "\n You now have:" + playerBalance + " points");
 		}
 	}
+	/*		
+	int playerBalance=0;
+	int numOfCorrect=0;
+	int numOfIncorrect=0;*/
+	
 	/*Question question = gameBoard[0][0];
 	String answer= question.getSolution();
 	System.out.println(question.getQuestion());
