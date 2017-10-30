@@ -6,7 +6,7 @@ import question.ArrayQuestions;
 public class Board {
 	
 
-	private Question[][] jeapordyBoard;
+	private static Question[][] jeapordyBoard;
 	//private Question Arrays;
 
 	public Board(Question[][]jeapordyBoard)
@@ -21,7 +21,7 @@ public class Board {
 */	
 	}
 	
-	public Question[][] generateBoard()
+	public static Question[][] generateBoard()
 	{
 		jeapordyBoard= new Question[3][3];
 		jeapordyBoard[0][0]= new ArrayQuestions(200, false,"Question: Can an array have multiple data types?","No");

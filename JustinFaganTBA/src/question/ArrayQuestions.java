@@ -21,16 +21,18 @@ public class ArrayQuestions implements Question {
 
 
 	@Override
-	public int pointValue() {
+	public int getPointValue() {
 		// TODO Auto-generated method stub
 		return pointValue;
 	}
 
 	@Override
-	public boolean result() {
+	public String getSolution() {
 		// TODO Auto-generated method stub
-		return false;
+		return solution;
 	}
+	
+	
 
 
 

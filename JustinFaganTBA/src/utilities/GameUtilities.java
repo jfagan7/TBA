@@ -1,10 +1,14 @@
 package utilities;
 
+import question.Question;
+
 public class GameUtilities {
-	public String getGreeting()
+	public static String getGreeting()
 	{
-		
-		return "What question would you like to get?";
+		return "Welcome to Java Jeapordy! You probably know how Jeapordy works so there's no point in explaining"
+				+ " You have 3 categories: Arrays, Strings, and Java Fundamentals. To pick a question say it like "
+				+ "'Arrays for 200'."
+				+ "Now what will your first question be?";
 	}
 	private int findKeyword(String statement, String goal,
 			int startPos)
@@ -65,4 +69,6 @@ public class GameUtilities {
 	{
 		return findKeyword (statement, goal, 0);
 	}
+	
+	
 }
