@@ -14,6 +14,17 @@ public class GameUtilities {
 	{
 		return "What would you like to pick?";
 	}
+	public static void printBoard(Question[][] board)
+	{
+		for(int i=0;i<board.length;i++)
+		{
+			for(int j=0;j<board[i].length;j++)
+			{
+				//System.out.print([i][j].pointValue);
+			}
+			//System.out.println(x);
+		}
+	}
 /*	private int findKeyword(String statement, String goal,
 			int startPos)
 	{
