@@ -1,9 +1,14 @@
 package question;
 
 
-public class ArrayQuestions implements Question {
+public class ArrayQuestions extends Question {
 
-	private int pointValue;
+	public ArrayQuestions(int pointValue, String question, String solution) {
+		super(pointValue, question, solution);
+		// TODO Auto-generated constructor stub
+	}
+
+/*	private int pointValue;
 	private String question;
 	private String solution;
 
@@ -36,6 +41,6 @@ public class ArrayQuestions implements Question {
 	public String getQuestion() {
 		// TODO Auto-generated method stub
 	    return question;
-	}
+	}*/
 
 }

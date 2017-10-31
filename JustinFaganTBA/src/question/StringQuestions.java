@@ -1,8 +1,13 @@
 package question;
 
-public class StringQuestions implements Question {
+public class StringQuestions extends Question {
 
-	private int pointValue;
+	public StringQuestions(int pointValue, String question, String solution) {
+		super(pointValue, question, solution);
+		// TODO Auto-generated constructor stub
+	}
+
+/*	private int pointValue;
 	private String question;
 	private String solution;
 
@@ -30,5 +35,5 @@ public class StringQuestions implements Question {
 		// TODO Auto-generated method stub
 		return question;
 	}
-
+*/
 }

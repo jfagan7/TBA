@@ -10,19 +10,16 @@ public class GameUtilities {
 				+ "\n'Arrays for 200'."
 				+ "\nNow what will your first question be?";
 	}
-	public static String getResponse(String statement)
+	public static String getResponse()
 	{
 		return "What would you like to pick?";
 	}
-	public static void printBoard(Question[][] board)
+
+	public void invalidChoice(Question question)
 	{
-		for(int i=0;i<board.length;i++)
+		if(Question.isAnswered())
 		{
-			for(int j=0;j<board[i].length;j++)
-			{
-				//System.out.print([i][j].pointValue);
-			}
-			//System.out.println(x);
+			question.pointValue=0;
 		}
 	}
 /*	private int findKeyword(String statement, String goal,
