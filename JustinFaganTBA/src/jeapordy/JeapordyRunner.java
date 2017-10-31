@@ -50,6 +50,7 @@ public class JeapordyRunner {
 			
 			System.out.println("Oh I'm sorry. The answer we were looking for was" + answer + "." + "\n You now have:" + playerBalance + " points");
 		}
+		System.out.println(GameUtilities.getResponse());
 	}
 	/*		
 	int playerBalance=0;

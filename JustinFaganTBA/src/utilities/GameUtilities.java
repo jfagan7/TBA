@@ -10,6 +10,10 @@ public class GameUtilities {
 				+ "'Arrays for 200'."
 				+ "Now what will your first question be?";
 	}
+	public static String getResponse()
+	{
+		return "What would you like to pick?";
+	}
 	private int findKeyword(String statement, String goal,
 			int startPos)
 	{

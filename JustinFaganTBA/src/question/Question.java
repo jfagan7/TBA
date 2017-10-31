@@ -2,7 +2,6 @@ package question;
 
 public interface Question {
 
-	boolean isAnswered = false;
 
 	public abstract int getPointValue();
 
