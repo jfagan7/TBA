@@ -6,15 +6,15 @@ public class GameUtilities {
 	public static String getGreeting()
 	{
 		return "Welcome to Java Jeapordy! You probably know how Jeapordy works so there's no point in explaining"
-				+ " You have 3 categories: Arrays, Strings, and Java Fundamentals. To pick a question say it like "
-				+ "'Arrays for 200'."
-				+ "Now what will your first question be?";
+				+ "\n You have 3 categories: Arrays, Strings, and Java Fundamentals. To pick a question say it like "
+				+ "\n'Arrays for 200'."
+				+ "\nNow what will your first question be?";
 	}
-	public static String getResponse()
+	public static String getResponse(String statement)
 	{
 		return "What would you like to pick?";
 	}
-	private int findKeyword(String statement, String goal,
+/*	private int findKeyword(String statement, String goal,
 			int startPos)
 	{
 		String phrase = statement.trim().toLowerCase();
@@ -61,18 +61,18 @@ public class GameUtilities {
 		return -1;
 	}
 	
-	/**
+	*//**
 	 * Search for one word in phrase.  The search is not case sensitive.
 	 * This method will check that the given goal is not a substring of a longer string
 	 * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
 	 * @param statement the string to search
 	 * @param goal the string to search for
 	 * @return the index of the first occurrence of goal in statement or -1 if it's not found
-	 */
+	 *//*
 	public int findKeyword(String statement, String goal)
 	{
 		return findKeyword (statement, goal, 0);
-	}
+	}*/
 	
 	
 }

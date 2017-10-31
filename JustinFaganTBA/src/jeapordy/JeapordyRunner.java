@@ -11,6 +11,7 @@ public class JeapordyRunner {
 	private static int playerBalance=0;
 	private static int numOfCorrect=0;
 	private static int numOfIncorrect=0;
+	private static boolean gameIsRunning;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,9 +21,17 @@ public class JeapordyRunner {
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
+		
+		
+		while(gameIsRunning) {
+			System.out.println (GameUtilities.getResponse(statement));
+			statement = in.nextLine();
+			
+		}
 		if(statement.equals("Arrays for 200"))
 		{
 			arraysfor200(gameBoard);
+			System.out.println(GameUtilities.getResponse(statement));
 		}
 	}
 
@@ -48,9 +57,8 @@ public class JeapordyRunner {
 			playerBalance -= query.getPointValue();
 			query = null;
 			
-			System.out.println("Oh I'm sorry. The answer we were looking for was" + answer + "." + "\n You now have:" + playerBalance + " points");
-		}
-		System.out.println(GameUtilities.getResponse());
+			System.out.println("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
+		}	
 	}
 	/*		
 	int playerBalance=0;
