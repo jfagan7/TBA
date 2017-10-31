@@ -8,16 +8,16 @@ import utilities.GameUtilities;
 
 public class JeapordyRunner {
 
-	private static int playerBalance=0;
-	private static int numOfCorrect=0;
-	private static int numOfIncorrect=0;
+	public static int playerBalance=0;
+	public static int numOfCorrect=0;
+	public static int numOfIncorrect=0;
 	private static boolean gameIsRunning;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Question[][] gameBoard= new Question[3][3];
-		gameBoard=Board.generateBoard();
-		System.out.println (GameUtilities.getGreeting());
+		
+		Game game= new Game();
+		/*System.out.println (GameUtilities.getGreeting());
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
@@ -28,10 +28,13 @@ public class JeapordyRunner {
 			statement = in.nextLine();
 			
 			Scanner playerResponse = new Scanner(System.in);
-			String response = playerResponse.nextLine();
+			String response = playerResponse.nextLine();*/
+		System.out.println (game.getGreeting());
+		Scanner in = new Scanner (System.in);
+		String statement = in.nextLine();
 			
 		}
-		if(statement.equals("Arrays for 200"))
+		/*if(statement.equals("Arrays for 200"))
 		{
 			arraysfor200(gameBoard,statement);
 			System.out.println(GameUtilities.getResponse());
@@ -60,8 +63,8 @@ public class JeapordyRunner {
 		Question query = gameBoard[0][1];
 		String answer= query.getSolution();
 		System.out.println(query.getQuestion());
-		/*Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();*/
+		Scanner playerResponse = new Scanner(System.in);
+		String response = playerResponse.nextLine();
 		if(statement.equals(answer))
 		{
 			numOfCorrect++;
@@ -83,8 +86,8 @@ public class JeapordyRunner {
 		Question query = gameBoard[0][0];
 		String answer= query.getSolution();
 		System.out.println(query.getQuestion());
-		/*Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();*/
+		Scanner playerResponse = new Scanner(System.in);
+		String response = playerResponse.nextLine();
 		if(statement.equals(answer))
 		{
 			numOfCorrect++;
@@ -105,8 +108,8 @@ public class JeapordyRunner {
 		Question query = gameBoard[0][2];
 		String answer= query.getSolution();
 		System.out.println(query.getQuestion());
-		/*Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();*/
+		Scanner playerResponse = new Scanner(System.in);
+		String response = playerResponse.nextLine();
 		if(statement.equals(answer))
 		{
 			numOfCorrect++;
@@ -123,6 +126,6 @@ public class JeapordyRunner {
 			query.isAnswered();
 		}	
 	}
-
+*/
 	
 }
