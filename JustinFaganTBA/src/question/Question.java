@@ -2,7 +2,7 @@ package question;
 
 public abstract class Question {
 
-	private int pointValue;
+	public int pointValue;
 	private String question;
 	private String solution;
 
@@ -34,7 +34,7 @@ public abstract class Question {
 	    return question;
 	}
 	
-	public boolean isAnswered()
+	public static boolean isAnswered()
 	{
 		return true;
 	}

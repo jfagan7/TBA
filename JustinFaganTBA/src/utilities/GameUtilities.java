@@ -10,10 +10,21 @@ public class GameUtilities {
 				+ "\n'Arrays for 200'."
 				+ "\nNow what will your first question be?";
 	}
-	public static String getResponse(String statement)
+	public static String getResponse()
 	{
 		return "What would you like to pick?";
 	}
+	public void invalidChoice(Question question)
+	{
+		if(Question.isAnswered())
+		{
+			question.pointValue=0;
+		}
+	}
+	/*public printArray()
+	{
+		
+	}*/
 /*	private int findKeyword(String statement, String goal,
 			int startPos)
 	{
