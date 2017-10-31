@@ -1,11 +1,42 @@
 package question;
 
-public interface Question {
+public abstract class Question {
+
+	private int pointValue;
+	private String question;
+	private String solution;
+
+	public Question(int pointValue, String question, String solution) {
+		// TODO Auto-generated constructor stub\
+		this.pointValue=pointValue;
+		this.question=question;
+		this.solution=solution;
+	}
 
 
-	public abstract int getPointValue();
 
-	public abstract String getSolution();
+	public int getPointValue() {
+		// TODO Auto-generated method stub
+		return pointValue;
+	}
+
+	public String getSolution() {
+		// TODO Auto-generated method stub
+		return solution;
+	}
 	
-	public abstract String getQuestion();
+	
+
+
+
+	public String getQuestion() {
+		// TODO Auto-generated method stub
+	    return question;
+	}
+	
+	public boolean isAnswered()
+	{
+		return true;
+	}
+	
 }
