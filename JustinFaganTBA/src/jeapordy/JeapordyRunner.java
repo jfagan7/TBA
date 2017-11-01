@@ -11,27 +11,21 @@ public class JeapordyRunner {
 	public static int playerBalance=0;
 	public static int numOfCorrect=0;
 	public static int numOfIncorrect=0;
-	private static boolean gameIsRunning;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		GameUtilities game= new GameUtilities();
+		System.out.println (game.getGreeting());
+		Question[][] gameBoard= new Question[3][3];		
+		 gameBoard=Board.generateBoard();
 		
-		Game game= new Game();
-		/*System.out.println (GameUtilities.getGreeting());
-		Scanner in = new Scanner (System.in);
-		String statement = in.nextLine();
-		
-		
+		boolean gameIsRunning=true;
 		
 		while(gameIsRunning) {
-			System.out.println (GameUtilities.getResponse());
-			statement = in.nextLine();
+			System.out.println (game.getResponse(statement, gameBoard));
+			Scanner in = new Scanner (System.in);
+			String statement = in.nextLine();
 			
-			Scanner playerResponse = new Scanner(System.in);
-			String response = playerResponse.nextLine();*/
-		System.out.println (game.getGreeting());
-		Scanner in = new Scanner (System.in);
-		String statement = in.nextLine();
 			
 		}
 		/*if(statement.equals("Arrays for 200"))
@@ -48,7 +42,7 @@ public class JeapordyRunner {
 		{
 			logicfor200(gameBoard,statement);
 			System.out.println(GameUtilities.getResponse());
-		}
+		}*/
 	}
 	
 	
@@ -58,7 +52,7 @@ public class JeapordyRunner {
 	
 	
 	
-	private static void stringsfor200(Question[][] gameBoard, String statement)
+/*	private static void stringsfor200(Question[][] gameBoard, String statement)
 	{
 		Question query = gameBoard[0][1];
 		String answer= query.getSolution();
@@ -125,7 +119,7 @@ public class JeapordyRunner {
 			System.out.println("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			query.isAnswered();
 		}	
-	}
-*/
+	}*/
+
 	
 }

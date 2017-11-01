@@ -25,8 +25,13 @@ public abstract class Question {
 		return solution;
 	}
 	
-	
-
+	public void invalidChoice(Question question)
+	{
+		if(Question.isAnswered())
+		{
+			question.pointValue=0;
+		}
+	}
 
 
 	public String getQuestion() {
@@ -38,5 +43,8 @@ public abstract class Question {
 	{
 		return true;
 	}
+
+
+
 	
 }
