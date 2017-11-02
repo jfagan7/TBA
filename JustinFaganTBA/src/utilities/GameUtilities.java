@@ -23,6 +23,7 @@ public class GameUtilities {
 	public void getResponse(String statement, Question[][]gameBoard)
 	{
 		
+		
 		if(statement.equals("Arrays for 200"))
 		{
 			arraysfor200(gameBoard,statement);
@@ -107,18 +108,20 @@ public class GameUtilities {
 		System.out.println(query.getQuestion());
 		Scanner playerResponse = new Scanner(System.in);
 		String response = playerResponse.nextLine();
-		if(statement.equals(answer))
+		if(response.equals(answer))
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
 			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+			query.isAnswered();
 			
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points") ;
+			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
+			query.isAnswered();
 		}
 	}
 	private static void arraysfor200(Question[][] gameBoard, String statement) {
@@ -130,17 +133,19 @@ public class GameUtilities {
 		System.out.println(query.getQuestion());
 		Scanner playerResponse = new Scanner(System.in);
 		String response = playerResponse.nextLine();
-		if(statement.equals(answer))
+		if(response.equals(answer))
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
 			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+			query.isAnswered();
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
+			query.isAnswered();
 			}	
 	}
 	private static void logicfor200(Question[][] gameBoard, String statement) {
@@ -151,11 +156,12 @@ public class GameUtilities {
 		System.out.println(query.getQuestion());
 		Scanner playerResponse = new Scanner(System.in);
 		String response = playerResponse.nextLine();
-		if(statement.equals(answer))
+		if(response.equals(answer))
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
 			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+			query.isAnswered();
 			
 		}
 		else
@@ -163,6 +169,7 @@ public class GameUtilities {
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
+			query.isAnswered();
 		}	
 	}
 	

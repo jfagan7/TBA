@@ -25,5 +25,15 @@ public class Board {
 		return jeapordyBoard;
 		
 	}
+	public void printBoard(Question[][] jeapordyBoard)
+	{
+		int row;
+		int col;		
+		for(row=0;row<jeapordyBoard.length;row++)
+			for(col=0;col<jeapordyBoard[row].length;col++)
+			{
+				System.out.print("[");
+			}
+	}
 
 }
