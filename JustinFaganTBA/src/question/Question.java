@@ -27,7 +27,7 @@ public abstract class Question {
 	
 	public void invalidChoice(Question question)
 	{
-		if(Question.isAnswered())
+		if(question.isAnswered())
 		{
 			question.pointValue=0;
 		}
@@ -39,7 +39,7 @@ public abstract class Question {
 	    return question;
 	}
 	
-	public static boolean isAnswered()
+	public boolean isAnswered()
 	{
 		return true;
 	}

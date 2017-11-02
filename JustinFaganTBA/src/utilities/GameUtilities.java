@@ -1,7 +1,7 @@
 package utilities;
 
 import java.util.Scanner;
-
+import utilities.GameUtilities;
 import question.Question;
 
 public class GameUtilities {
@@ -12,24 +12,23 @@ public class GameUtilities {
 				+ "\n'Arrays for 200'."
 				+ "\nNow what will your first question be?";
 	}
-	public void getResponse(String statement, Question[][]gameBoard)
+	public String getResponse(String statement, Question[][]gameBoard)
 	{
-		//return "What would you like to pick?";
-		
 		
 		if(statement.equals("Arrays for 200"))
 		{
-			arraysfor200(gameBoard,statement);
+			return arraysfor200(gameBoard,statement);
 		}
 		if(statement.equals("Strings for 200"))
 		{
-			stringsfor200(gameBoard,statement);
+			return stringsfor200(gameBoard,statement);
 		}
 		if(statement.equals("Logic for 200"))
 		{
-			logicfor200(gameBoard,statement);
+			return logicfor200(gameBoard,statement);
 		}
 		
+		return "What question would you like to pick?";
 	}
 
 
@@ -86,13 +85,14 @@ public class GameUtilities {
 	 * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
 	 * @param statement the string to search
 	 * @param goal the string to search for
+	 * @return 
 	 * @return the index of the first occurrence of goal in statement or -1 if it's not found
 	 *//*
 	public int findKeyword(String statement, String goal)
 	{
 		return findKeyword (statement, goal, 0);
 	}*/
-	private static void stringsfor200(Question[][] gameBoard, String statement)
+	private static String stringsfor200(Question[][] gameBoard, String statement)
 	{
 		int numOfCorrect=0;
 		int numOfIncorrect=0;
@@ -107,19 +107,17 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			query.isAnswered();
+			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
 			
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			System.out.println("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
-			query.isAnswered();
+			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
 		}
 	}
-	private static void arraysfor200(Question[][] gameBoard, String statement) {
+	private static String arraysfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
 		int numOfCorrect=0;
 		int numOfIncorrect=0;
@@ -134,19 +132,16 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			query.isAnswered();
-			//query.invalidChoice(query);
+			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			System.out.println("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
-			query.isAnswered();
+			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
 			}	
 	}
-	private static void logicfor200(Question[][] gameBoard, String statement) {
+	private static String logicfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
 		int numOfCorrect=0;
 		int numOfIncorrect=0;
@@ -161,16 +156,14 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			query.isAnswered();
+			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
 			
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			System.out.println("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
-			query.isAnswered();
+			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
 		}	
 	}
 	

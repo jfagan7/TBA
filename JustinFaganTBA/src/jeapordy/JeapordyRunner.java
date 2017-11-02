@@ -22,9 +22,10 @@ public class JeapordyRunner {
 		boolean gameIsRunning=true;
 		
 		while(gameIsRunning) {
-			System.out.println (game.getResponse(statement, gameBoard));
+			
 			Scanner in = new Scanner (System.in);
 			String statement = in.nextLine();
+			System.out.print(game.getResponse(statement, gameBoard));
 			
 			
 		}
