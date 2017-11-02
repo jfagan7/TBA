@@ -8,9 +8,9 @@ import utilities.GameUtilities;
 
 public class JeapordyRunner {
 
-	public static int playerBalance=0;
+	/*public static int playerBalance=0;
 	public static int numOfCorrect=0;
-	public static int numOfIncorrect=0;
+	public static int numOfIncorrect=0;*/
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -25,7 +25,7 @@ public class JeapordyRunner {
 			
 			Scanner in = new Scanner (System.in);
 			String statement = in.nextLine();
-			System.out.print(game.getResponse(statement, gameBoard));
+			game.getResponse(statement, gameBoard);
 			
 			
 		}

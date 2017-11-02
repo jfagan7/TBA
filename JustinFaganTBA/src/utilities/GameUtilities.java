@@ -5,6 +5,10 @@ import utilities.GameUtilities;
 import question.Question;
 
 public class GameUtilities {
+	static int numOfCorrect=0;
+	static int numOfIncorrect=0;
+	static int playerBalance=0;
+	
 	public static String getGreeting()
 	{
 		return "Welcome to Java Jeapordy! You probably know how Jeapordy works so there's no point in explaining"
@@ -12,23 +16,27 @@ public class GameUtilities {
 				+ "\n'Arrays for 200'."
 				+ "\nNow what will your first question be?";
 	}
-	public String getResponse(String statement, Question[][]gameBoard)
+	public String askQuestion()
+	{
+		return "What will your next question be?";
+	}
+	public void getResponse(String statement, Question[][]gameBoard)
 	{
 		
 		if(statement.equals("Arrays for 200"))
 		{
-			return arraysfor200(gameBoard,statement);
+			arraysfor200(gameBoard,statement);
 		}
 		if(statement.equals("Strings for 200"))
 		{
-			return stringsfor200(gameBoard,statement);
+			stringsfor200(gameBoard,statement);
 		}
 		if(statement.equals("Logic for 200"))
 		{
-			return logicfor200(gameBoard,statement);
+			logicfor200(gameBoard,statement);
 		}
 		
-		return "What question would you like to pick?";
+		System.out.println(askQuestion());
 	}
 
 
@@ -85,18 +93,14 @@ public class GameUtilities {
 	 * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
 	 * @param statement the string to search
 	 * @param goal the string to search for
-	 * @return 
 	 * @return the index of the first occurrence of goal in statement or -1 if it's not found
 	 *//*
 	public int findKeyword(String statement, String goal)
 	{
 		return findKeyword (statement, goal, 0);
 	}*/
-	private static String stringsfor200(Question[][] gameBoard, String statement)
+	private static void stringsfor200(Question[][] gameBoard, String statement)
 	{
-		int numOfCorrect=0;
-		int numOfIncorrect=0;
-		int playerBalance=0;
 		
 		Question query = gameBoard[0][1];
 		String answer= query.getSolution();
@@ -107,21 +111,19 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
+			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
 			
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
+			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points") ;
 		}
 	}
-	private static String arraysfor200(Question[][] gameBoard, String statement) {
+	private static void arraysfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
-		int numOfCorrect=0;
-		int numOfIncorrect=0;
-		int playerBalance=0;
+		
 		
 		Question query = gameBoard[0][0];
 		String answer= query.getSolution();
@@ -132,20 +134,17 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
+			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
+			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			}	
 	}
-	private static String logicfor200(Question[][] gameBoard, String statement) {
+	private static void logicfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
-		int numOfCorrect=0;
-		int numOfIncorrect=0;
-		int playerBalance=0;
 		
 		Question query = gameBoard[0][2];
 		String answer= query.getSolution();
@@ -156,14 +155,14 @@ public class GameUtilities {
 		{
 			numOfCorrect++;
 			playerBalance += query.getPointValue();
-			return "Congratulations you are correct! \n You now have:" + playerBalance + " points";
+			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
 			
 		}
 		else
 		{
 			numOfIncorrect++;
 			playerBalance -= query.getPointValue();
-			return "Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points";
+			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 		}	
 	}
 	
