@@ -1,5 +1,9 @@
 package utilities;
-
+/**
+ * This class contains all the rules and procedures for conducting this game.
+ * @author Justin Fagan
+ * @date November 2017
+ */
 import java.util.Scanner;
 
 import board.Board;
@@ -17,7 +21,8 @@ public class GameUtilities {
 		return "Welcome to Java Jeapordy! You probably know how Jeapordy works so there's no point in explaining"
 				+ "\n You have 3 categories: Arrays, Strings, and Logic. To pick a question say it like "
 				+ "\n'Arrays for 200'."
-				+ "\nNow what will your first question be?";
+				+ "\n However, your answer does not have to be in the form of a question."
+				+ "\n Now what will your first question be?";
 	}
 	public int Tally()
 	{
@@ -113,18 +118,25 @@ public class GameUtilities {
 		
 		
 		Question query = gameBoard[0][0];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -132,25 +144,32 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-			}	
+			}
+		}
 	}
 	private static void stringsfor200(Question[][] gameBoard, String statement)
 	{
 		
 		Question query = gameBoard[0][1];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -158,25 +177,32 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
+			}
 		}
 	}
 	private static void logicfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
 		
 		Question query = gameBoard[0][2];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -184,25 +210,31 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-		}	
+			}
+		}
 	}
 	private static void arraysfor400(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
-		
-		
 		Question query = gameBoard[1][0];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -210,25 +242,32 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-			}	
+			}
+		}
 	}
 	private static void stringsfor400(Question[][] gameBoard, String statement)
 	{
 		
 		Question query = gameBoard[1][1];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -236,25 +275,32 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
+			}
 		}
 	}
 	private static void logicfor400(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
 		
 		Question query = gameBoard[1][2];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -262,25 +308,31 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-		}	
+			}
+		}
 	}
 	private static void arraysfor800(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
-		
-		
 		Question query = gameBoard[2][0];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -288,25 +340,32 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-			}	
+			}
+		}
 	}
 	private static void stringsfor800(Question[][] gameBoard, String statement)
 	{
 		
 		Question query = gameBoard[2][1];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -314,25 +373,31 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
+			}
 		}
 	}
 	private static void logicfor800(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
-		
 		Question query = gameBoard[2][2];
-		String answer= query.getSolution();
-		System.out.println(query.getQuestion());
-		Scanner playerResponse = new Scanner(System.in);
-		String response = playerResponse.nextLine();
-		if(compare(response,answer))
+		if(query.pointValue==0)
 		{
-			numOfCorrect++;
-			playerBalance += query.getPointValue();
-			System.out.println("Congratulations you are correct! \n You now have:" + playerBalance + " points");
-			System.out.println();
-			query.isAnswered();
-			
+			System.out.print("You already answered this!");
+			count+=0;
 		}
+		else 
+		{
+			String answer= query.getSolution();
+			System.out.println(query.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += query.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				query.isAnswered();
+			}
 		else
 		{
 			numOfIncorrect++;
@@ -340,7 +405,8 @@ public class GameUtilities {
 			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
 			System.out.println();
 			query.isAnswered();
-		}	
+			}
+		}
 	}
 
 }
