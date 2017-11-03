@@ -25,24 +25,15 @@ public abstract class Question {
 		return solution;
 	}
 	
-/*	public void invalidChoice(Question question)
-	{
-		if(question.isAnswered())
-		{
-			
-		}
-	}*/
-
 
 	public String getQuestion() {
 		// TODO Auto-generated method stub
 	    return question;
 	}
 	
-	public boolean isAnswered()
+	public void isAnswered()
 	{
 		pointValue=0;
-		return true;
 	}
 
 
