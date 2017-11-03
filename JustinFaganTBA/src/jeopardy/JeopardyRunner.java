@@ -1,4 +1,9 @@
 package jeopardy;
+/**
+ * The runner class that executes every function and runs the game in the main method
+ * @author Justin Fagan
+ * @date November 2017
+ */
 import java.util.Scanner;
 
 import board.Board;

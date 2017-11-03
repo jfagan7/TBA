@@ -1,5 +1,9 @@
 package board;
-
+/**
+ * A simple class to generate and create Board functions.
+ * @author Justin Fagan
+ * @date November 2017
+ */
 import question.Question;
 import question.StringQuestions;
 import question.ArrayQuestions;
