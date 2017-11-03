@@ -1,4 +1,4 @@
-package jeapordy;
+package jeopardy;
 import java.util.Scanner;
 
 import board.Board;
@@ -6,7 +6,7 @@ import board.Board;
 import question.Question;
 import utilities.GameUtilities;
 
-public class JeapordyRunner {
+public class JeopardyRunner {
 
 
 
