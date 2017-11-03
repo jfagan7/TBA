@@ -57,55 +57,39 @@ public class GameUtilities {
 	}
 	public void getResponse(String statement, Question[][]gameBoard)
 	{
-		if(compare(statement,""))
+		
+		switch (statement.toLowerCase().trim())
 		{
-			System.out.print("You have to pick a question.");
-		}
-		if(compare(statement,"Arrays for 200"))
-		{
-			arraysfor200(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Strings for 200"))
-		{
-			stringsfor200(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Logic for 200"))
-		{
-			logicfor200(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Arrays for 400"))
-		{
-			arraysfor400(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Strings for 400"))
-		{
-			stringsfor400(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Logic for 400"))
-		{
-			logicfor400(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Arrays for 800"))
-		{
-			arraysfor800(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Strings for 800"))
-		{
-			stringsfor800(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
-		if(compare(statement,"Logic for 800"))
-		{
-			logicfor800(gameBoard,statement);
-			Board.printBoard(gameBoard);
-		}
+        	case "arraysfor200":
+        		arraysfor200(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "stringsfor200":
+        		stringsfor200(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "logicfor200":
+        		logicfor200(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "arraysfor400":
+        		arraysfor400(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "stringsfor400":
+        		stringsfor400(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "logicfor400":
+        		logicfor400(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "arraysfor800":
+        		arraysfor800(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "stringsfor800":
+        		stringsfor800(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	case "logicfor800":
+        		logicfor800(gameBoard,statement);
+        		Board.printBoard(gameBoard);
+        	default: 
+        	System.out.print("You have to pick a question.");
+    }
 		if(count!=9) 
 		{
 			System.out.println(askQuestion());
