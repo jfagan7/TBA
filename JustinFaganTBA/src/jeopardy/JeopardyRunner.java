@@ -25,7 +25,6 @@ public class JeopardyRunner {
 			String statement = in.nextLine();
 			game.getResponse(statement, gameBoard);
 			tally= game.Tally();
-			//System.out.println(tally);
 		}
 		System.out.println(game.gameOver());
 	}
