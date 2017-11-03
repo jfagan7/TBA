@@ -1,5 +1,9 @@
 package question;
-
+/**
+ * An abstract class that defines a Question and the different properties that it has.
+ * @author Justin Fagan
+ * @date November 2017
+ */
 public abstract class Question {
 
 	public int pointValue;
