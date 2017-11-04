@@ -11,10 +11,10 @@ import utilities.GameUtilities;
 import question.Question;
 
 public class GameUtilities {
-	public static int numOfCorrect=0;
-	public static int numOfIncorrect=0;
-	public static int playerBalance=0;
-	public static int count=0;
+	private static int numOfCorrect=0;
+	private static int numOfIncorrect=0;
+	private static int playerBalance=0;
+	private static int count=0;
 	
 	public static String getGreeting()
 	{
