@@ -7,7 +7,6 @@ package jeopardy;
 import java.util.Scanner;
 
 import board.Board;
-//import question.ArrayQuestions;
 import question.Question;
 import utilities.GameUtilities;
 
