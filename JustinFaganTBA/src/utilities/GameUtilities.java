@@ -61,31 +61,31 @@ public class GameUtilities {
 		switch (statement.toLowerCase().trim())
 		{
         	case "arraysfor200":
-        		arraysfor200(gameBoard,statement);
+        		initializeQuestion(gameBoard[0][0]);
         		Board.printBoard(gameBoard);
         	case "stringsfor200":
-        		stringsfor200(gameBoard,statement);
+        		initializeQuestion(gameBoard[0][1]);
         		Board.printBoard(gameBoard);
         	case "logicfor200":
-        		logicfor200(gameBoard,statement);
+        		initializeQuestion(gameBoard[0][2]);
         		Board.printBoard(gameBoard);
         	case "arraysfor400":
-        		arraysfor400(gameBoard,statement);
+        		initializeQuestion(gameBoard[1][0]);
         		Board.printBoard(gameBoard);
         	case "stringsfor400":
-        		stringsfor400(gameBoard,statement);
+        		initializeQuestion(gameBoard[1][1]);
         		Board.printBoard(gameBoard);
         	case "logicfor400":
-        		logicfor400(gameBoard,statement);
+        		initializeQuestion(gameBoard[1][2]);
         		Board.printBoard(gameBoard);
         	case "arraysfor800":
-        		arraysfor800(gameBoard,statement);
+        		initializeQuestion(gameBoard[2][0]);
         		Board.printBoard(gameBoard);
         	case "stringsfor800":
-        		stringsfor800(gameBoard,statement);
+        		initializeQuestion(gameBoard[2][1]);
         		Board.printBoard(gameBoard);
         	case "logicfor800":
-        		logicfor800(gameBoard,statement);
+        		initializeQuestion(gameBoard[2][2]);
         		Board.printBoard(gameBoard);
         	default: 
         	System.out.print("You have to pick a question.");
@@ -95,7 +95,7 @@ public class GameUtilities {
 			System.out.println(askQuestion());
 		}
 	}
-
+/*
 	
 	private static void arraysfor200(Question[][] gameBoard, String statement) {
 		// TODO Auto-generated method stub
@@ -391,6 +391,38 @@ public class GameUtilities {
 			query.isAnswered();
 			}
 		}
+	}*/
+	public static void initializeQuestion(Question question)
+	{
+		if(question.pointValue==0)
+		{
+			System.out.print("You already answered this!");
+			count+=0;
+		}
+		else 
+		{
+			String answer= question.getSolution();
+			System.out.println(question.getQuestion());
+			Scanner playerResponse = new Scanner(System.in);
+			String response = playerResponse.nextLine();
+			if(compare(response,answer))
+			{
+				numOfCorrect++;
+				playerBalance += question.getPointValue();
+				System.out.print("Congratulations you are correct! \n You now have:" + playerBalance + " points");
+				System.out.println();
+				question.isAnswered();
+			}
+		else
+		{
+			numOfIncorrect++;
+			playerBalance -= question.getPointValue();
+			System.out.print("Oh I'm sorry. The answer we were looking for was " + answer + "." + "\n You now have:" + playerBalance + " points");
+			System.out.println();
+			question.isAnswered();
+			}
+		}
+
 	}
 
 }
