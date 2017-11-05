@@ -13,13 +13,15 @@ public class Board {
 	
 
 	private static Question[][] jeopardyBoard;
-	//private Question Arrays;
 
 	public Board(Question[][]jeopardyBoard)
 	{
 		this.jeopardyBoard= jeopardyBoard;
 	}
-	
+	/**
+	 * Only called once in the initial game to generate the Jeopardy board.
+	 * @return the game board that the player will be using 
+	 */
 	public static Question[][] generateBoard()
 	{
 		jeopardyBoard= new Question[3][3];
@@ -50,6 +52,10 @@ public class Board {
 		return jeopardyBoard;
 		
 	}
+	/**
+	 * Displays the board to help keep track of which questions the player answered and can answer.
+	 * @return void
+	 */
 	public static void printBoard(Question[][] jeopardyBoard)
 	{
 		String[]categories= {"Arrays","Strings","Logic"};
