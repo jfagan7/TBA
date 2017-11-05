@@ -13,7 +13,9 @@ import utilities.GameUtilities;
 public class JeopardyRunner {
 
 
-
+	/**
+	 * Initializes the game board and greets the player,give it user input, and print its replies.
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		GameUtilities game= new GameUtilities();
