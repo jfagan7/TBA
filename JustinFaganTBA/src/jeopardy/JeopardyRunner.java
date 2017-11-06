@@ -25,7 +25,7 @@ public class JeopardyRunner {
 		 Board.printBoard(gameBoard);
 		
 		int tally=0;
-		while(tally != 9) {
+		while(tally != 16) {
 			
 			Scanner in = new Scanner (System.in);
 			String statement = in.nextLine();

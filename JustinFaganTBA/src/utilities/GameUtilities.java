@@ -102,6 +102,10 @@ public class GameUtilities {
         		initializeQuestion(gameBoard[0][2]);
         		Board.printBoard(gameBoard);
         		break;
+        	case "Objects for 200":
+        		initializeQuestion(gameBoard[0][3]);
+        		Board.printBoard(gameBoard);
+        		break;
         	case "Arrays for 400":
         		initializeQuestion(gameBoard[1][0]);
         		Board.printBoard(gameBoard);
@@ -112,6 +116,10 @@ public class GameUtilities {
         		break;
         	case "Logic for 400":
         		initializeQuestion(gameBoard[1][2]);
+        		Board.printBoard(gameBoard);
+        		break;
+        	case "Objects for 400":
+        		initializeQuestion(gameBoard[1][3]);
         		Board.printBoard(gameBoard);
         		break;
         	case "Arrays for 800":
@@ -126,15 +134,35 @@ public class GameUtilities {
         		initializeQuestion(gameBoard[2][2]);
         		Board.printBoard(gameBoard);
         		break;
+        	case "Objects for 800":
+        		initializeQuestion(gameBoard[2][3]);
+        		Board.printBoard(gameBoard);
+        		break;
+        	case "Arrays for 1600":
+        		initializeQuestion(gameBoard[3][0]);
+        		Board.printBoard(gameBoard);
+        		break;
+        	case "Strings for 1600":
+        		initializeQuestion(gameBoard[3][1]);
+        		Board.printBoard(gameBoard);
+        		break;
+        	case "Logic for 1600":
+        		initializeQuestion(gameBoard[3][2]);
+        		Board.printBoard(gameBoard);
+        		break;
+        	case "Objects for 1600":
+        		initializeQuestion(gameBoard[3][3]);
+        		Board.printBoard(gameBoard);
+        		break;
         	default: 
         	System.out.print("You have to pick a question!"
         			+ "\n Also make sure you're:"
         			+ "\n Leaving one space between each word "
-        			+ "\n The category is capitalized like 'Array' "
+        			+ "\n The category is capitalized like 'Objects' "
         			+ "\n And 'for' is lowercase");
         	break;
     }
-		if(count!=8) 
+		if(count!=15) 
 		{
 			System.out.println(askQuestion());
 		}
