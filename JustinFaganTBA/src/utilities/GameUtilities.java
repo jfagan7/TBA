@@ -66,7 +66,7 @@ public class GameUtilities {
 	 */
 	public String gameOver()
 	{
-		if(playerBalance<=3200)
+		if(playerBalance<=10200)
 		{
 			System.out.println("# of Correct:" + numOfCorrect +
 					"\n # of Incorrect:" + numOfIncorrect +
