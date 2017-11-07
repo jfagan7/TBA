@@ -20,7 +20,7 @@ public class JeopardyRunner {
 		// TODO Auto-generated method stub
 		GameUtilities game= new GameUtilities();
 		System.out.println (GameUtilities.getGreeting());
-		Question[][] gameBoard= new Question[3][3];		
+		Question[][] gameBoard= new Question[4][4];		
 		 gameBoard=Board.generateBoard();
 		 Board.printBoard(gameBoard);
 		

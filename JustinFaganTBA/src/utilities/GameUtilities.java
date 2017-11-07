@@ -22,7 +22,7 @@ public class GameUtilities {
 	public static String getGreeting()
 	{
 		return "Welcome to Java Jeapordy! You probably know how Jeapordy works so there's no point in explaining"
-				+ "\n You have 3 categories: Arrays, Strings, and Logic. To pick a question say it like "
+				+ "\n You have 4 categories: Arrays, Strings, Logic and Objects. To pick a question say it like "
 				+ "\n'Arrays for 200'."
 				+ "\n However, your answer does not have to be in the form of a question."
 				+ "\n Now what will your first question be?";
